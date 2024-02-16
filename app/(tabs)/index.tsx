@@ -1,31 +1,35 @@
-import { StyleSheet } from 'react-native';
-
-import EditScreenInfo from '@/components/EditScreenInfo';
-import { Text, View } from '@/components/Themed';
+import NewReservationButton from "@/components/new-reservation-button"
+import ReservationCard from "@/components/reservation-card"
+import { Text, View } from "react-native"
+import { createStyleSheet, useStyles } from "react-native-unistyles"
 
 export default function TabOneScreen() {
+  const { styles } = useStyles(stylesheet)
+
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Tab One</Text>
-      <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
-      <EditScreenInfo path="app/(tabs)/index.tsx" />
+      <Text style={styles.title}>Mis Reservas</Text>
+      <ReservationCard />
+      <ReservationCard />
+      <ReservationCard />
+      <ReservationCard />
+      <ReservationCard />
+      <ReservationCard />
+      <NewReservationButton />
     </View>
-  );
+  )
 }
 
-const styles = StyleSheet.create({
+const stylesheet = createStyleSheet((theme) => ({
   container: {
     flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
+    paddingHorizontal: 20,
+    gap: 10,
+    backgroundColor: theme.colors.backgroundPrimary,
   },
   title: {
+    color: theme.colors.textPrimary,
     fontSize: 20,
-    fontWeight: 'bold',
+    fontWeight: "bold",
   },
-  separator: {
-    marginVertical: 30,
-    height: 1,
-    width: '80%',
-  },
-});
+}))
