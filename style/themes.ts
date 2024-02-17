@@ -7,6 +7,7 @@ export const lightTheme = {
     backgroundPrimary: "#ffffff",
     backgroundSecondary: "#f6f6f6",
     border: "#0000001f",
+    warning: "#e5484d",
   },
   margins: {
     sm: 2,
@@ -25,6 +26,7 @@ export const darkTheme = {
     backgroundPrimary: "#161616",
     backgroundSecondary: "#1f1f1f",
     border: "#ffffff1f",
+    warning: "#e5484d",
   },
   margins: {
     sm: 2,
